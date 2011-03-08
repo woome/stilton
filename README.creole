@@ -11,7 +11,7 @@ hg (Mercurial).
 
 == Why? ==
 
-Because I wanted less than a full pypi replacement (a ///site/// wide
+Because I wanted less than a full pypi replacement (a //site// wide
 package tool) and a more hacked about code base (doing things like
 auto-building some packages and making binary_dumb's available)
 
@@ -39,7 +39,7 @@ The best way to upload a package is using the management command 'ppadd'
 
 == Using with pip ==
 
-upload ///packagename/// and then:
+upload //packagename// and then:
 
 {{{
 pip install -f http://localhost:8007 -i http://localhost:8007/simple packagename
