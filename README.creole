@@ -1,0 +1,61 @@
+A Python cheeseshop.
+
+== What? ==
+
+This is just [[https://github.com/ask/chishop|Solem Hoel's chishop]]
+wrapped up differently.
+
+I haven't forked the project in github because I did the movement with
+hg (Mercurial).
+
+
+== Why? ==
+
+Because I wanted less than a full pypi replacement (a ///site/// wide
+package tool) and a more hacked about code base (doing things like
+auto-building some packages and making binary_dumb's available)
+
+== Installing ==
+
+I use [[http://githun.com/nicferrier/veh|veh]] to declare the dependancies for this. 
+
+At the moment we're using a direct link to WooMe's Django which we
+haven't published yet. We'll get around to that. In the mean time any
+other version of django would do.
+
+So basic steps for install:
+
+ * clone this repo
+ * cd repo
+ * veh shell
+ * cd cheeseshop
+ * python manage.py syncdb
+ * make a user called "nicferrier" with the password "1"
+ * python manage.py runserver 8007
+
+and you're going.
+
+The best way to upload a package is using the management command 'ppadd' 
+
+== Using with pip ==
+
+upload ///packagename/// and then:
+
+{{{
+pip install -f http://localhost:8007 -i http://localhost:8007/simple packagename
+}}}
+
+that's it.
+
+
+== Anything else? ==
+
+You may be interested in why I'm doing this. It's because I think I
+can build something like a proxy for python packages so that you can
+build once, upload and then make your dumb build available to machines
+exactly the same as yours (including yours).
+
+Why am I doing that? so that many virtualenvs can be created over and
+over again with the same package but not spending the time to build
+it. That is very useful for big environments where you are running the
+same depends over and over again on the same hardware.
