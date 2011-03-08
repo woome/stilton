@@ -30,7 +30,7 @@ So basic steps for install:
  * veh shell
  * cd cheeseshop
  * python manage.py syncdb
- * make a user called "nicferrier" with the password "1"
+ * make a user called "nferrier" with the password "1"
  * python manage.py runserver 8007
 
 and you're going.
