@@ -79,6 +79,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'cheeseshop.middleware.AutoLoginMiddleware',
 )
 
 ROOT_URLCONF = 'urls'
@@ -106,6 +107,5 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.markup',
     'django.contrib.admindocs',
-    'registration',
     'djangopypi',
 )

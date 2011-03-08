@@ -6,7 +6,7 @@ from djangopypi.models import Project, Release
 from djangopypi.http import HttpResponseNotImplemented
 from djangopypi.http import parse_distutils_request
 from djangopypi.views.dists import register_or_upload
-from djangopypi.views.users import create_user
+#from djangopypi.views.users import create_user
 from djangopypi.views.search import search
 
 
@@ -18,7 +18,7 @@ ACTIONS = {
     "submit": register_or_upload,
 
     # user is the action used when registering a new user
-    "user": create_user,
+#    "user": create_user,
 }
 
 
